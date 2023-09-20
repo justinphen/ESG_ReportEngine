@@ -25,7 +25,7 @@ time.sleep(1)
 search_box = driver.find_element(by=By.ID,value="searchStockCode")
 
 # Find and fill in the search box
-search_content = "09992"
+search_content = "HKEX_stock_code"
 search_box.send_keys(search_content)
 time.sleep(3)
 
@@ -53,8 +53,8 @@ esg_b_title = "Environmental, Social & Governance".lower().replace(" ", "")
 esg_c_title = "ESG Report".lower().replace(" ", "")
 annual_title = "Annual Report".lower().replace(" ", "")
 sus_title = "Sustainability Report".lower().replace(" ", "")
-year = "2021"
-year_ = "2021/22"
+year = "year"
+year_ = "year/year"
 for doc_link in doc_links:
     report = doc_link.text.lower().replace(" ", "")
     if (esg_title in report or annual_title in report \
