@@ -8,7 +8,8 @@ from bs4 import BeautifulSoup
 import time
 
 # Initialize Selenium WebDriver with Chrome
-service = Service("/Users/justinphen/Downloads/chromedriver-mac-x64/chromedriver")
+chromedriverurl = "replace_with_your_chromedriver_downloaded_location"
+service = Service(chromedriverurl)
 driver = webdriver.Chrome(service=service)
 
 # Open the HKEX website
