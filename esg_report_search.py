@@ -8,7 +8,7 @@ from bs4 import BeautifulSoup
 import time
 
 # Initialize Selenium WebDriver with Chrome
-chromedriverurl = "/Users/justinphen/Downloads/chromedriver-mac-x64/chromedriver"
+chromedriverurl = "replace_with_your_chromedriver_downloaded_location"
 service = Service(chromedriverurl)
 driver = webdriver.Chrome(service=service)
 
@@ -25,7 +25,7 @@ time.sleep(1)
 search_box = driver.find_element(by=By.ID,value="searchStockCode")
 
 # Find and fill in the search box
-search_content = "01161"
+search_content = "HKEX_stock_code"
 search_box.send_keys(search_content)
 time.sleep(3)
 
