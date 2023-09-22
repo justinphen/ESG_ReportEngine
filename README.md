@@ -28,7 +28,7 @@ To this:
 ```
 search_content = "09992"
 ```
-To change the year, you can enter the year(s) on line 93 under the variable `year_options`. For example, if you want to search for year 2021 or 2021/22: <br>
+To change the year, you can enter the year(s) on line 94 under the variable `year_options`. For example, if you want to search for year 2021 or 2021/22: <br>
 
 Repalce:
 ```
