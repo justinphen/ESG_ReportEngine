@@ -87,32 +87,19 @@ titles = [
     clean_title("Environmental, Social & Governance"),
     clean_title("ESG Report"),
     clean_title("Sustainability Report"),
-    clean_title("Corporate Social Responsibility Report")
+    clean_title("Corporate Social Responsibility Report"),
+    clean_title("Annual Report")
 ]
 
 year_options = ["2021", "2021/22"]
-
-esg_report_found = False
-annual_title = clean_title("Annual Report")
 
 # Loop through doc links
 for doc_link in doc_links:
     report = clean_title(doc_link.text)
 
     # Check if report title matches any ESG-related titles
-    if any(title in report for title in titles):
-        esg_report_found = True
-        if any(year_option in report for year_option in year_options):
-            print(doc_link.text)  # doc name
-            print(doc_link.get_attribute("href"))  # doc link
-
-# If no ESG-related report found, check for "Annual Report"
-if not esg_report_found:
-    for doc_link in doc_links:
-        report = clean_title(doc_link.text)
-        if annual_title in report:
-            if any(year_option in report for year_option in year_options):
-                print(doc_link.text)  # doc name
-                print(doc_link.get_attribute("href"))  # doc link
+    if any(title in report for title in titles) and any(year_option in report for year_option in year_options):
+        print(doc_link.text)  # doc name
+        print(doc_link.get_attribute("href"))  # doc link
 
 driver.quit()
