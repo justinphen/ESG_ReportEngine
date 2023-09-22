@@ -63,7 +63,7 @@ for doc_link in doc_links:
         ("supplemental" not in report and "letter" not in report \
         and "announcement" not in report and "information" not in report \
         and "regarding" not in report and "delay" not in report \
-        and "notice" not in report): # filtering
+        and "notice" not in report and "notification" not in report): # filtering
         print(doc_link.text) # doc name
         print(doc_link.get_attribute("href")) # doc link
 
