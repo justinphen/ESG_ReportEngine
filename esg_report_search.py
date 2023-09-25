@@ -85,20 +85,24 @@ def clean_title(title):
 titles = [
     clean_title("Environmental, Social and Governance"),
     clean_title("Environmental, Social & Governance"),
+    clean_title("Environmental, Social, and Governance"),
+    clean_title("Environmental, Society and Governance"),
     clean_title("ESG Report"),
     clean_title("Sustainability Report"),
-    clean_title("Corporate Social Responsibility Report"),
+    clean_title("Corporate Social Responsibility"),
+    clean_title("CSR Report"),
+    clean_title("Social Responsibility Report"),
     clean_title("Annual Report")
 ]
 
-year_options = ["2021", "2021/22"]
+year = ["2021"]
 
 # Loop through doc links
 for doc_link in doc_links:
     report = clean_title(doc_link.text)
 
     # Check if report title matches any ESG-related titles
-    if any(title in report for title in titles) and any(year_option in report for year_option in year_options):
+    if any(title in report for title in titles) and any(year in report for year_option in year):
         print(doc_link.text)  # doc name
         print(doc_link.get_attribute("href"))  # doc link
 
