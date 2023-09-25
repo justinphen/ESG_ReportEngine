@@ -28,17 +28,16 @@ To this:
 ```
 search_content = "09992"
 ```
-To change the year, you can enter the year(s) on line 94 under the variable `year_options`. For example, if you want to search for year 2021 or 2021/22: <br>
+To change the year, you can enter the year on line 98 under the variable `year`. For example, if you want to search for year 2021 or 2021/22: <br>
 
 Repalce:
 ```
-year_options = ["year", "year/year"]
+year_options = ["year"]
 ```
 To this:
 ```
-year_options = ["2021", "2021/22"]
+year_options = ["2021"]
 ```
-The reason why we require to put 2 versions of years is because companies have different report cycles, where some will report from January to December, and some will report in the middle of one year till the middle of the next year, which is why if we want to focus on collecting reports from year 2021, we want both 2021 and 2021/22 (for 2022, it will be 2022 and 2022/23...)
 
 ### Results
 In some cases, the engine may produce multiple responses, which is completely normal. Given the diverse range of variables, such as varying titles in ESG reports, human intervention remains necessary to address specific instances. Nevertheless, this feature significantly enhances time efficiency during task execution. Please kindly notify me of any encountered challenges by submitting an issue ticket in this repository, and I will promptly rectify them.
