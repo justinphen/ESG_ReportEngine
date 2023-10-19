@@ -95,7 +95,7 @@ titles = [
     clean_title("Annual Report")
 ]
 
-year = ["2021"]
+year = ["year"]
 
 # Loop through doc links
 for doc_link in doc_links:
